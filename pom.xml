@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- The Basics -->
+  <groupId>com.mcparland.john</groupId>
+  <artifactId>vaadin_cookbook</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <dependencies>
+  </dependencies>
+
+  <modules>
+  </modules>
+  
+  <properties>
+  </properties>
+
+  <!-- More Project Information -->
+  <name>John McParland Vaadin Cookbook Examples</name>
+  <description>Examples from the Vaadin Cookbook.</description>
+  <url>https://github.com/johnmmcparland/vaadin_cookbook</url>
+  <inceptionYear>2014</inceptionYear>
+  <licenses>
+      <license>Apache License, Version 2.0</license>
+	  <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+  </licenses>
+  
+  <developers>
+      <developer>
+	      <id>johnmcparland</id>
+		  <name>John McParland</name>
+		  <email>johnmmcparland-NOSPAM-@-NOSPAM-gmail.com</email>
+		  <roles>
+		      <role>developer</role>
+		  </roles>
+	  </developer>
+  </developers>
+
+  <!-- Environment Settings -->
+  <issueManagement>
+      <system>Github</system>
+	  <url>https://github.com/johnmmcparland/vaadin_cookbook/issues</url>
+  </issueManagement>
+  
+  <scm>
+      <connection>scm:svn:https://github.com/johnmmcparland/vaadin_cookbook</connection>
+  </scm>
+  
+  <prerequisites>
+      <maven>3.0.4</maven>
+  </prerequisites>
+
+</project>
