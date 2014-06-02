@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
+	   <groupId>com.mcparland.john</groupId>
        <artifactId>vaadin_cookbook</artifactId>
-       <groupId>com.mcparland.john</groupId>
        <version>0.1-SNAPSHOT</version>
     </parent>
 
