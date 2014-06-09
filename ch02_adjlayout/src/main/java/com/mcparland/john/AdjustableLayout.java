@@ -38,6 +38,14 @@ import com.vaadin.ui.VerticalSplitPanel;
  */
 public class AdjustableLayout extends HorizontalSplitPanel {
 
+    /**
+     * @see java.io.Serializable
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * Some random text.
+     */
     private static final String LIPSUM = "Lorem ipsum dolor …";
 
     /**
