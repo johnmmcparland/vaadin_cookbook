@@ -15,9 +15,6 @@ hs_err_pid*
 .settings
 .project
 .classpath
-*.project
-*.project
-.project
 
 # VAADIN dirs
-*/VAADIN/*
+VAADIN/
