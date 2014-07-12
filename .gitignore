@@ -16,5 +16,5 @@ hs_err_pid*
 .project
 .classpath
 
-# VAADIN dirs
-VAADIN/
+# VAADIN widgetset
+VAADIN/widgetset/
