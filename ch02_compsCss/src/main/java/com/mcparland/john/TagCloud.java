@@ -47,6 +47,7 @@ import com.vaadin.ui.CssLayout;
  * @author John McParland.
  * 
  */
+@SuppressWarnings("serial")
 public class TagCloud extends CssLayout {
 
     /*
