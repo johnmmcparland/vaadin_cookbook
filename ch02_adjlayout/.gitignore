@@ -19,4 +19,4 @@ hs_err_pid*
 .classpath
 
 # VAADIN widgetset
-VAADIN/widgetsets/
+src/main/webapp/VAADIN/widgetsets/
