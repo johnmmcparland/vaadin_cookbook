@@ -26,9 +26,9 @@ under the License.
         <version>0.1-SNAPSHOT</version>
     </parent>
 	
-	<artifactId>ch02_tabsUrl</artifactId>
+	<artifactId>ch02_navigator</artifactId>
 	<packaging>war</packaging>
-	<name>Chapter 2: Tabs with Hard URL</name>
+	<name>Chapter 2: Navigator</name>
 
 	<properties>
 	</properties>
@@ -105,11 +105,6 @@ under the License.
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${javax.servlet.api.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-		     <groupId>org.apache.commons</groupId>
-		     <artifactId>commons-lang3</artifactId>
-		     <version>3.3.2</version>
 		</dependency>
 	</dependencies>
 

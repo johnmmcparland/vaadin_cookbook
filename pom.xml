@@ -27,6 +27,7 @@
 		<module>ch02_compsCss</module>
     <module>ch02_cssMobile</module>
     <module>ch02_tabsUrl</module>
+    <module>ch02_navigator</module>
   </modules>
 
 	<properties>
