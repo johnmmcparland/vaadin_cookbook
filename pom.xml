@@ -29,6 +29,7 @@
     <module>ch02_tabsUrl</module>
     <module>ch02_navigator</module>
     <module>ch02_align</module>
+    <module>ch02_collectionsOfComponents</module>
   </modules>
 
 	<properties>
