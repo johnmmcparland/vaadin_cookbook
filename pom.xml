@@ -28,6 +28,7 @@
     <module>ch02_cssMobile</module>
     <module>ch02_tabsUrl</module>
     <module>ch02_navigator</module>
+    <module>ch02_align</module>
   </modules>
 
 	<properties>
