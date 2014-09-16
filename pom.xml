@@ -30,6 +30,7 @@
     <module>ch02_navigator</module>
     <module>ch02_align</module>
     <module>ch02_collectionsOfComponents</module>
+    <module>ch02_dnd</module>
   </modules>
 
 	<properties>
