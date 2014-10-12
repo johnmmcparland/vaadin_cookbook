@@ -31,6 +31,7 @@
     <module>ch02_align</module>
     <module>ch02_collectionsOfComponents</module>
     <module>ch02_dnd</module>
+    <module>ch02_absLayout</module>
   </modules>
 
 	<properties>
