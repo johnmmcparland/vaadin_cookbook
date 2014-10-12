@@ -39,7 +39,13 @@ mvn archetype:generate \
 
 # Copy .gitignore
 cp .gitignore ${ARTIFACTID}/
-		
+
+# Modify...
+# <source>${java.version}</source> (from 1.6)
+# <target>${java.version}</target> (from 1.6)
+sed -i "s/\<source\>1.6/\<source\>${java.version}/g"
+sed -i "s/\<target\>1.6/\<target\>${java.version}/g"
+
 echo "[INFO] Complete.  If the above succeeded try"
 echo "       cd ${ARTIFACTID}"
 echo "       mvn clean package"
