@@ -8,7 +8,9 @@
 	by applicable law or agreed to in writing, software distributed under the 
 	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
 	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- The Basics -->
@@ -25,14 +27,15 @@
 		<module>ch02_adjlayout</module>
 		<module>ch02_customlayout</module>
 		<module>ch02_compsCss</module>
-    <module>ch02_cssMobile</module>
-    <module>ch02_tabsUrl</module>
-    <module>ch02_navigator</module>
-    <module>ch02_align</module>
-    <module>ch02_collectionsOfComponents</module>
-    <module>ch02_dnd</module>
-    <module>ch02_absLayout</module>
-  </modules>
+		<module>ch02_cssMobile</module>
+		<module>ch02_tabsUrl</module>
+		<module>ch02_navigator</module>
+		<module>ch02_align</module>
+		<module>ch02_collectionsOfComponents</module>
+		<module>ch02_dnd</module>
+		<module>ch02_absLayout</module>
+		<module>ch03_listSelect</module>
+	</modules>
 
 	<properties>
 		<!-- Build properties -->
@@ -52,7 +55,7 @@
 
 		<!-- License Header Generation -->
 		<license.organizationName>John McParland</license.organizationName>
-		
+
 	</properties>
 
 	<!-- More Project Information -->
@@ -127,7 +130,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -153,7 +157,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>

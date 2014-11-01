@@ -1,4 +1,4 @@
-﻿#!/bin/sh 
+#!/bin/sh 
 #######################################
 ## Create a Vaadin project
 ## See https://vaadin.com/book/-/page/getting-started.maven.html
@@ -31,11 +31,11 @@ mvn archetype:generate \
     -DarchetypeGroupId=com.vaadin \
     -DarchetypeArtifactId=vaadin-archetype-application \
     -DarchetypeVersion=${VAADINVERSION} \
-	-DinteractiveMode=false \
-	-DgroupId=${GROUPID} \
-	-DartifactId=${ARTIFACTID} \
-	-Dversion=${VERSION} \
-	-Dpackaging=war
+    -DinteractiveMode=false \
+    -DgroupId=${GROUPID} \
+    -DartifactId=${ARTIFACTID} \
+    -Dversion=${VERSION} \
+    -Dpackaging=war
 
 # Copy .gitignore
 cp .gitignore ${ARTIFACTID}/
@@ -43,8 +43,12 @@ cp .gitignore ${ARTIFACTID}/
 # Modify...
 # <source>${java.version}</source> (from 1.6)
 # <target>${java.version}</target> (from 1.6)
-sed -i "s/\<source\>1.6/\<source\>${java.version}/g"
-sed -i "s/\<target\>1.6/\<target\>${java.version}/g"
+#sed -i 's/1.6/${java.version}/g' ${ARTIFACTID}/pom.xml
+
+# Update the pom to contain the right java version, plugin versions
+# and more
+cp TEMPLATE_POM.xml ${ARTIFACTID}/pom.xml
+sed -i 's/ARTIFACTID/${ARTIFACTID}/g' ${ARTIFACTID}/pom.xml
 
 echo "[INFO] Complete.  If the above succeeded try"
 echo "       cd ${ARTIFACTID}"
