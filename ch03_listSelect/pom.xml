@@ -19,7 +19,7 @@
 	</parent>
 	<artifactId>ch03_listSelect</artifactId>
 	<packaging>war</packaging>
-	<name>Vaadin Web Application</name>
+	<name>Chapter 3: List Select</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
