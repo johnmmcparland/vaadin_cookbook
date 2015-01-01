@@ -33,6 +33,7 @@ E.g.
 From the vaadin_cookbook diretory.
 
 Sorry to create a new chapter, you'll need to do it manually.
+
 ---
 
 [1] Holaň, J; Kvasnovský O (2013). Vaadin 7 Cookbook. Birmingham: Packt Publishing. All.

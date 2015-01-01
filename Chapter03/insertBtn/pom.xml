@@ -19,7 +19,7 @@
 	</parent>
 	<artifactId>insertBtn</artifactId>
 	<packaging>war</packaging>
-	<name>Vaadin Web Application</name>
+	<name>Page 63: Inserting a button to remove a table row</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
