@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
-	license agreements. See the NOTICE file distributed with this work for additional 
-	information regarding copyright ownership. The ASF licenses this file to 
-	you under the Apache License, Version 2.0 (the "License"); you may not use 
-	this file except in compliance with the License. You may obtain a copy of 
-	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
-	by applicable law or agreed to in writing, software distributed under the 
-	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
-	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<parent>
-		<artifactId>CHAPTERDIR</artifactId>
-		<groupId>com.mcparland.john.vaadin_cookbook</groupId>
-		<version>0.1-SNAPSHOT</version>
-	</parent>
-	<artifactId>ARTIFACTID</artifactId>
+        <artifactId>vaadin_cookbook</artifactId>
+        <groupId>com.mcparland.john</groupId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+	
+	<artifactId>ch02_customlayout</artifactId>
 	<packaging>war</packaging>
-	<name>Vaadin Web Application</name>
+	<name>Chapter 2: Custom Layout</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
 		<repository>
@@ -61,12 +69,21 @@
 			<artifactId>vaadin-client-compiled</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
-		<!-- Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory). 
-			For widgetset compilation, vaadin-client-compiler is automatically added 
-			on the compilation classpath by vaadin-maven-plugin so normally there is 
-			no need for an explicit dependency. -->
-		<!-- <dependency> <groupId>com.vaadin</groupId> <artifactId>vaadin-client-compiler</artifactId> 
-			<version>${vaadin.version}</version> <scope>provided</scope> </dependency> -->
+		<!--
+		  Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory).
+		  
+		  For widgetset compilation, vaadin-client-compiler is automatically added on the
+		  compilation classpath by vaadin-maven-plugin so normally there is no need for an
+		  explicit dependency.
+		-->
+		<!--
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-client-compiler</artifactId>
+			<version>${vaadin.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		-->
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client</artifactId>
@@ -96,7 +113,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.compiler.plugin.version}</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
@@ -105,7 +121,6 @@
 			<!-- As we are doing "inplace" GWT compilation, ensure the widgetset -->
 			<!-- directory is cleaned properly -->
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>${maven.clean.plugin.version}</version>
 				<configuration>
@@ -138,13 +153,12 @@
 					<!-- Most Vaadin apps don't need this stuff, guide that to target -->
 					<persistentunitcachedir>${project.build.directory}</persistentunitcachedir>
 					<deploy>${project.build.directory}/gwt-deploy</deploy>
-					<!-- Compile report is not typically needed either, saves hunreds of 
-						mb disk -->
+					<!-- Compile report is not typically needed either, saves hunreds of mb disk -->
 					<compileReport>false</compileReport>
 					<noServer>true</noServer>
 					<!-- Remove draftCompile when project is ready -->
 					<draftCompile>false</draftCompile>
-
+					
 					<style>OBF</style>
 					<strict>true</strict>
 					<runTarget>http://localhost:8080/</runTarget>
@@ -171,8 +185,7 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

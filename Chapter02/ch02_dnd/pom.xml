@@ -12,17 +12,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
-		<artifactId>CHAPTERDIR</artifactId>
-		<groupId>com.mcparland.john.vaadin_cookbook</groupId>
+		<artifactId>vaadin_cookbook</artifactId>
+		<groupId>com.mcparland.john</groupId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ARTIFACTID</artifactId>
+
+	<artifactId>ch02_dnd</artifactId>
 	<packaging>war</packaging>
-	<name>Vaadin Web Application</name>
+	<name>Chapter 2: Drag and Drop</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
 		<repository>
@@ -72,11 +73,6 @@
 			<artifactId>vaadin-client</artifactId>
 			<version>${vaadin.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-push</artifactId>
-			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>

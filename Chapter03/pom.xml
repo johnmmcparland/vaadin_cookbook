@@ -8,14 +8,18 @@
 	by applicable law or agreed to in writing, software distributed under the 
 	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
 	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	language governing permissions and limitations under the License. --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>com.mcparland.john.vaadin_cookbook</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+	
 	<!-- The Basics -->
 	<groupId>com.mcparland.john.vaadin_cookbook</groupId>
-	<artifactId>parent</artifactId>
+	<artifactId>Chapter03</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -23,10 +27,9 @@
 	</dependencies>
 
 	<modules>
-		<module>Chapter01</module>
-		<module>Chapter02</module>
-		<module>Chapter03</module>
-	</modules>
+		<module>ch03_listSelect</module>
+    <module>insertBtn</module>
+  </modules>
 
 	<properties>
 		<!-- Build properties -->
@@ -50,8 +53,8 @@
 	</properties>
 
 	<!-- More Project Information -->
-	<name>John McParland Vaadin Cookbook Examples: Parent</name>
-	<description>Examples from the Vaadin Cookbook: Parent</description>
+	<name>John McParland Vaadin Cookbook Examples: Chapter 3</name>
+	<description>Examples from the Vaadin Cookbook: Chapter 3</description>
 	<url>https://github.com/johnmmcparland/vaadin_cookbook</url>
 	<inceptionYear>2014</inceptionYear>
 	<licenses>
@@ -148,7 +151,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore />
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
