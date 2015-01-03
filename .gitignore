@@ -20,3 +20,4 @@ hs_err_pid*
 
 # VAADIN widgetset
 src/main/webapp/VAADIN/widgetsets/
+build.log
