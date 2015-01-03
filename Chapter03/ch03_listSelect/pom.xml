@@ -13,8 +13,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>vaadin_cookbook</artifactId>
-		<groupId>com.mcparland.john</groupId>
+		<artifactId>Chapter03</artifactId>
+		<groupId>com.mcparland.john.vaadin_cookbook</groupId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ch03_listSelect</artifactId>

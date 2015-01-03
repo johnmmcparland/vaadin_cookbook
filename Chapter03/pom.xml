@@ -8,7 +8,8 @@
 	by applicable law or agreed to in writing, software distributed under the 
 	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
 	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -28,137 +29,7 @@
 
 	<modules>
 		<module>ch03_listSelect</module>
-    <module>insertBtn</module>
+        <module>insertBtn</module>
   </modules>
 
-	<properties>
-		<!-- Build properties -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
-
-		<!-- 3rd party dependencies -->
-		<javax.servlet.api.version>3.0.1</javax.servlet.api.version>
-		<vaadin.version>7.2.1</vaadin.version>
-		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-
-		<!-- Maven Plugins -->
-		<maven.clean.plugin.version>2.5</maven.clean.plugin.version>
-		<maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
-		<maven.war.plugin.version>2.2</maven.war.plugin.version>
-		<jetty.maven.plugin.version>8.1.14.v20131031</jetty.maven.plugin.version>
-
-		<!-- License Header Generation -->
-		<license.organizationName>John McParland</license.organizationName>
-
-	</properties>
-
-	<!-- More Project Information -->
-	<name>John McParland Vaadin Cookbook Examples: Chapter 3</name>
-	<description>Examples from the Vaadin Cookbook: Chapter 3</description>
-	<url>https://github.com/johnmmcparland/vaadin_cookbook</url>
-	<inceptionYear>2014</inceptionYear>
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-			<comments>A business-friendly OSS license</comments>
-		</license>
-	</licenses>
-
-	<developers>
-		<developer>
-			<id>johnmcparland</id>
-			<name>John McParland</name>
-			<email>johnmmcparland-NOSPAM-@-NOSPAM-gmail.com</email>
-			<roles>
-				<role>developer</role>
-			</roles>
-		</developer>
-	</developers>
-
-	<!-- Environment Settings -->
-	<issueManagement>
-		<system>Github</system>
-		<url>https://github.com/johnmmcparland/vaadin_cookbook/issues</url>
-	</issueManagement>
-
-	<scm>
-		<connection>scm:svn:https://github.com/johnmmcparland/vaadin_cookbook</connection>
-	</scm>
-
-	<prerequisites>
-		<maven>3.0.4</maven>
-	</prerequisites>
-
-	<!-- Build/plugins -->
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-				<version>1.7</version>
-				<configuration>
-					<verbose>false</verbose>
-					<addSvnKeyWords>false</addSvnKeyWords>
-				</configuration>
-				<executions>
-					<execution>
-						<id>first</id>
-						<goals>
-							<goal>update-file-header</goal>
-						</goals>
-						<phase>process-sources</phase>
-						<configuration>
-							<licenseName>apache_v2</licenseName>
-							<roots>
-								<root>src/main/java</root>
-								<root>src/test/java</root>
-								<root>src/main/resources</root>
-								<root>src/test/resources</root>
-							</roots>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.codehaus.mojo
-										</groupId>
-										<artifactId>
-											license-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.7,)
-										</versionRange>
-										<goals>
-											<goal>
-												update-file-header
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore/>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
 </project>
