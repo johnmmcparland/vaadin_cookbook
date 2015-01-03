@@ -19,6 +19,7 @@
 package com.mcparland.john.vaadin_cookbook;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.vaadin.shared.ui.JavaScriptComponentState;
 
@@ -39,6 +40,11 @@ public class FlotChartState extends JavaScriptComponentState {
      * The data.
      */
     private JSONArray data = null;
+
+    /**
+     * The options.
+     */
+    private JSONObject options = null;
 
     /**
      * Create a FlotChartState.
@@ -65,6 +71,25 @@ public class FlotChartState extends JavaScriptComponentState {
      */
     public void setData(JSONArray data) {
         this.data = data;
+    }
+
+    /**
+     * Get the options.
+     * 
+     * @return the options.
+     */
+    public JSONObject getOptions() {
+        return options;
+    }
+
+    /**
+     * Set the options.
+     * 
+     * @param options
+     *            the options to set.
+     */
+    public void setOptions(JSONObject options) {
+        this.options = options;
     }
 
 }

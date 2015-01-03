@@ -19,6 +19,9 @@
 window.com_mcparland_john_vaadin_cookbook_FlotChart = function() {
 	var element = $(this.getElement());
 	this.onStateChange = function() {
-		$.plot(element, this.getState().data);
+		var state = this.getState();
+		var options = state.options;
+		var data = state.data;
+		$.plot(element, data, options);
 	}
 }

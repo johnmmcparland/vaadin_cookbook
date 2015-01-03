@@ -66,10 +66,30 @@ public class MyVaadinUI extends UI {
         flot.setHeight("300px");
 
         // @formatter:off
-        String data = "[" + "  [" + "    [0, 5]," + "    [2, 7]," + "    [4, 8]," + "    [10, 5]" + "  ]" + "]";
+        String data = "[" +
+                      "  [" +
+                      "    [0, 5]," +
+                      "    [2, 7]," +
+                      "    [4, 8]," +
+                      "    [10, 5]" +
+                      "  ]" +
+                      "]";
+        
+        String options = 
+                "{" +
+                "  grid: {" +
+                "          backgroundColor: {" +
+                "                             colors: [" +
+                "                                       \"#fef\"," +
+                "                                       \"#eee\"" +
+                "                                     ]" +
+                "                           }" +
+                "        }" +
+                "}";
         // @formatter:on
 
         flot.setData(data);
+        flot.setOptions(options);
         layout.addComponent(flot);
     }
 

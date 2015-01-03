@@ -20,6 +20,7 @@ package com.mcparland.john.vaadin_cookbook;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.ui.AbstractJavaScriptComponent;
@@ -67,6 +68,21 @@ public class FlotChart extends AbstractJavaScriptComponent {
         try {
             data = new JSONArray(source);
             getState().setData(data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Set the options.
+     * 
+     * @param options
+     *            the options to set.
+     */
+    public void setOptions(String options) {
+        try {
+            JSONObject root = new JSONObject(options);
+            getState().setOptions(root);
         } catch (JSONException e) {
             e.printStackTrace();
         }
