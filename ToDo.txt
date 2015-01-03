@@ -1,3 +1,3 @@
 ﻿Continue From
 =============
-... page 67 (Chapter 3: Creating a line chart with Flot).
+... page 76 (Chapter 3: Drag-and-drop from the desktop).

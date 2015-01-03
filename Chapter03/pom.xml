@@ -30,6 +30,7 @@
 		<module>ch03_listSelect</module>
         <module>insertBtn</module>
     <module>flotChart</module>
+    <module>highcharts</module>
   </modules>
 
 </project>
