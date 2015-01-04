@@ -31,6 +31,7 @@
         <module>insertBtn</module>
     <module>flotChart</module>
     <module>highcharts</module>
+    <module>jodaDateField</module>
   </modules>
 
 </project>
