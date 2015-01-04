@@ -20,7 +20,7 @@ package com.mcparland.john.vaadin_cookbook;
 
 /*
  * #%L
- * Vaadin Web Application
+ * Chapter 03 (page 81): DateField with JodaTime DateTime
  * %%
  * Copyright (C) 2014 - 2015 John McParland
  * %%
@@ -38,79 +38,70 @@ package com.mcparland.john.vaadin_cookbook;
  * #L%
  */
 
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import com.vaadin.shared.ui.JavaScriptComponentState;
+import org.joda.time.DateTime;
 
 /**
- * A FlotChartState.
+ * A Post.
  * 
  * @author John McParland.
  *
  */
-public class FlotChartState extends JavaScriptComponentState {
+public class Post {
 
     /**
-     * The serialVersionUID.
+     * The text.
      */
-    private static final long serialVersionUID = 1345528294577585084L;
+    private String text = null;
 
     /**
-     * The data.
+     * The created.
      */
-    private JSONArray data = null;
+    private DateTime created = null;
 
     /**
-     * The options.
-     */
-    private JSONObject options = null;
-
-    /**
-     * Create a FlotChartState.
+     * Create a Post.
      *
      */
-    public FlotChartState() {
-
+    public Post() {
+        // TODO Auto-generated constructor stub
     }
 
     /**
-     * Get the data.
+     * Get the text.
      * 
-     * @return the data.
+     * @return the text.
      */
-    public JSONArray getData() {
-        return data;
+    public String getText() {
+        return text;
     }
 
     /**
-     * Set the data.
+     * Set the text.
      * 
-     * @param data
-     *            the data to set.
+     * @param text
+     *            the text to set.
      */
-    public void setData(JSONArray data) {
-        this.data = data;
+    public void setText(String text) {
+        this.text = text;
     }
 
     /**
-     * Get the options.
+     * Get the created.
      * 
-     * @return the options.
+     * @return the created.
      */
-    public JSONObject getOptions() {
-        return options;
+    public DateTime getCreated() {
+        return created;
     }
 
     /**
-     * Set the options.
+     * Set the created.
      * 
-     * @param options
-     *            the options to set.
+     * @param created
+     *            the created to set.
      */
-    public void setOptions(JSONObject options) {
-        this.options = options;
+    public void setCreated(DateTime created) {
+        this.created = created;
     }
 
 }

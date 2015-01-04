@@ -20,7 +20,7 @@ package com.mcparland.john.vaadin_cookbook;
 
 /*
  * #%L
- * Vaadin Web Application
+ * Chapter 03 (page 81): DateField with JodaTime DateTime
  * %%
  * Copyright (C) 2014 - 2015 John McParland
  * %%
@@ -38,79 +38,79 @@ package com.mcparland.john.vaadin_cookbook;
  * #L%
  */
 
+import java.util.Date;
+import java.util.Locale;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.joda.time.DateTime;
 
-import com.vaadin.shared.ui.JavaScriptComponentState;
+import com.vaadin.data.util.converter.Converter;
 
 /**
- * A FlotChartState.
+ * A DateTimeConverter.
  * 
  * @author John McParland.
  *
  */
-public class FlotChartState extends JavaScriptComponentState {
+public class DateTimeConverter implements Converter<Date, DateTime> {
 
     /**
      * The serialVersionUID.
      */
-    private static final long serialVersionUID = 1345528294577585084L;
+    private static final long serialVersionUID = 1L;
 
     /**
-     * The data.
-     */
-    private JSONArray data = null;
-
-    /**
-     * The options.
-     */
-    private JSONObject options = null;
-
-    /**
-     * Create a FlotChartState.
+     * Create a DateTimeConverter.
      *
      */
-    public FlotChartState() {
+    public DateTimeConverter() {
 
     }
 
-    /**
-     * Get the data.
+    /*
+     * (non-Javadoc)
      * 
-     * @return the data.
+     * @see
+     * com.vaadin.data.util.converter.Converter#convertToModel(java.lang.Object,
+     * java.lang.Class, java.util.Locale)
      */
-    public JSONArray getData() {
-        return data;
+    @Override
+    public DateTime convertToModel(Date value, Class<? extends DateTime> targetType, Locale locale)
+            throws com.vaadin.data.util.converter.Converter.ConversionException {
+        return new DateTime(value);
     }
 
-    /**
-     * Set the data.
+    /*
+     * (non-Javadoc)
      * 
-     * @param data
-     *            the data to set.
+     * @see
+     * com.vaadin.data.util.converter.Converter#convertToPresentation(java.lang
+     * .Object, java.lang.Class, java.util.Locale)
      */
-    public void setData(JSONArray data) {
-        this.data = data;
+    @Override
+    public Date convertToPresentation(DateTime value, Class<? extends Date> targetType, Locale locale)
+            throws com.vaadin.data.util.converter.Converter.ConversionException {
+        final Date date = value.toDate();
+        return date;
     }
 
-    /**
-     * Get the options.
+    /*
+     * (non-Javadoc)
      * 
-     * @return the options.
+     * @see com.vaadin.data.util.converter.Converter#getModelType()
      */
-    public JSONObject getOptions() {
-        return options;
+    @Override
+    public Class<DateTime> getModelType() {
+        return DateTime.class;
     }
 
-    /**
-     * Set the options.
+    /*
+     * (non-Javadoc)
      * 
-     * @param options
-     *            the options to set.
+     * @see com.vaadin.data.util.converter.Converter#getPresentationType()
      */
-    public void setOptions(JSONObject options) {
-        this.options = options;
+    @Override
+    public Class<Date> getPresentationType() {
+        return Date.class;
     }
 
 }

@@ -20,7 +20,7 @@ package com.mcparland.john.vaadin_cookbook;
 
 /*
  * #%L
- * Vaadin Web Application
+ * Chapter 03 (page 81): DateField with JodaTime DateTime
  * %%
  * Copyright (C) 2014 - 2015 John McParland
  * %%
@@ -38,79 +38,48 @@ package com.mcparland.john.vaadin_cookbook;
  * #L%
  */
 
+import org.joda.time.DateTime;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import com.vaadin.shared.ui.JavaScriptComponentState;
+import com.vaadin.data.fieldgroup.DefaultFieldGroupFieldFactory;
+import com.vaadin.ui.DateField;
+import com.vaadin.ui.Field;
 
 /**
- * A FlotChartState.
+ * A JodaFieldFactory.
  * 
  * @author John McParland.
  *
  */
-public class FlotChartState extends JavaScriptComponentState {
+@SuppressWarnings("serial")
+public class JodaFieldFactory extends DefaultFieldGroupFieldFactory {
 
     /**
-     * The serialVersionUID.
-     */
-    private static final long serialVersionUID = 1345528294577585084L;
-
-    /**
-     * The data.
-     */
-    private JSONArray data = null;
-
-    /**
-     * The options.
-     */
-    private JSONObject options = null;
-
-    /**
-     * Create a FlotChartState.
+     * Create a JodaFieldFactory.
      *
      */
-    public FlotChartState() {
-
+    public JodaFieldFactory() {
+        // TODO Auto-generated constructor stub
     }
 
-    /**
-     * Get the data.
+    /*
+     * (non-Javadoc)
      * 
-     * @return the data.
+     * @see
+     * com.vaadin.data.fieldgroup.DefaultFieldGroupFieldFactory#createField(
+     * java.lang.Class, java.lang.Class)
      */
-    public JSONArray getData() {
-        return data;
-    }
-
-    /**
-     * Set the data.
-     * 
-     * @param data
-     *            the data to set.
-     */
-    public void setData(JSONArray data) {
-        this.data = data;
-    }
-
-    /**
-     * Get the options.
-     * 
-     * @return the options.
-     */
-    public JSONObject getOptions() {
-        return options;
-    }
-
-    /**
-     * Set the options.
-     * 
-     * @param options
-     *            the options to set.
-     */
-    public void setOptions(JSONObject options) {
-        this.options = options;
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Override
+    public <T extends Field> T createField(Class<?> type, Class<T> fieldType) {
+        T field;
+        if (type.isAssignableFrom(DateTime.class)) {
+            DateField dateField = new DateField();
+            dateField.setConverter(new DateTimeConverter());
+            field = (T) dateField;
+        } else {
+            field = super.createField(type, fieldType);
+        }
+        return field;
     }
 
 }
