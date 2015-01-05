@@ -1,3 +1,7 @@
-﻿Continue From
-=============
-... page 76 (Chapter 3: Drag-and-drop from the desktop).
+﻿Completed Examples
+==================
+Chapter 1: Complete
+Chapter 2: Complete
+Chapter 3: All except;
+ - page 76 (Drag-and-drop from the desktop);
+ - page 85 (Zooming with the slider) onwards
