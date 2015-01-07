@@ -27,6 +27,7 @@
 	</dependencies>
 
 	<modules>
-        </modules>
+    <module>bindingContainer</module>
+  </modules>
 
 </project>
