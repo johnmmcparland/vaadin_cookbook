@@ -28,6 +28,7 @@
 
 	<modules>
     <module>bindingContainer</module>
+    <module>complexCrudTable</module>
   </modules>
 
 </project>

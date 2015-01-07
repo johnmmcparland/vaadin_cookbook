@@ -5,3 +5,7 @@ Chapter 2: Complete
 Chapter 3: All except;
  - page 76 (Drag-and-drop from the desktop);
  - page 85 (Zooming with the slider) onwards
+ 
+Chapter 9: Completed;
+ - page 270 (Binding container to component)
+ - page 273 (Complex CRUD Table)
